@@ -1,8 +1,6 @@
 from SbisPages import SbisSearchHelper
 from TensorPages import TensorSearchHelper
 
-from time import sleep
-
 
 def test_case1(browser):
     sbis_main_page = SbisSearchHelper(browser)
