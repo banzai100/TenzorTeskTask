@@ -11,5 +11,6 @@ class SbisSearchHelper(BasePage):
 
     def click_button(self, button, wait=False):
         if wait:
-            self.wait_element(self.LOCATORS["SBIS_OVERLAY"], time=2)
+            self.wait_element(self.LOCATORS["SBIS_OVERLAY"], time=5)
         return self.find_element(self.LOCATORS[button], time=2).click()
+
