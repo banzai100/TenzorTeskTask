@@ -6,7 +6,10 @@ class SbisSearchHelper(BasePage):
     base_url = "https://sbis.ru/"
     LOCATORS = {"SBIS_CONTACTS": (By.CSS_SELECTOR, "[href='/contacts']"),
                 "SBIS_TENSOR_BANNER": (By.CSS_SELECTOR, "[alt='Разработчик системы СБИС — компания «Тензор»']"),
-                "SBIS_OVERLAY": (By.XPATH, "//div[@class='preload-overlay']")
+                "SBIS_OVERLAY": (By.XPATH, "//div[@class='preload-overlay']"),
+                "REGION_CHOOSER": (By.XPATH, "//span[@class='sbis_ru-Region-Chooser__text sbis_ru-link']"),
+                "PARTNERS_LIST": (By.XPATH, "//div[@id='city-id-2']"),
+                "KAMCHATKA_KRAI": (By.XPATH, "//span[@title='Камчатский край']")
                 }
 
     def click_button(self, button, wait=False):
