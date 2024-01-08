@@ -1,7 +1,10 @@
-from basic import BasePage
-from selenium.webdriver.common.by import By
-import urllib.request
 import os
+import urllib.error
+import urllib.request
+
+from selenium.webdriver.common.by import By
+
+from basic import BasePage
 
 
 class SbisSearchHelper(BasePage):
@@ -10,12 +13,12 @@ class SbisSearchHelper(BasePage):
                 "SBIS_TENSOR_BANNER": (By.CSS_SELECTOR, "[alt='Разработчик системы СБИС — компания «Тензор»']"),
                 "SBIS_OVERLAY": (By.XPATH, "//div[@class='preload-overlay']"),
                 "REGION_CHOOSER": (By.XPATH, "//span[@class='sbis_ru-Region-Chooser__text sbis_ru-link']"),
-                "PARTNERS_LIST": (By.XPATH, "//div[@id='city-id-2']"),
+                "PARTNERS_NAMES": (By.XPATH, "//div[contains(@class, 'sbisru-Contacts-List__name')]"),
                 "KAMCHATKA_KRAI": (By.XPATH, "//span[@title='Камчатский край']"),
                 "COOKIE_AGREEMENT_CLOSE": (By.XPATH, "//div[@class='sbis_ru-CookieAgreement__close']"),
                 "DOWNLOAD_SBIS": (By.XPATH, "//a[contains(text(), 'Скачать СБИС')]"),
-                "SBIS_PLUGIN": (
-                By.XPATH, "//div[contains(text(),'СБИС Плагин')]/following::div[@class='controls-tabButton__overlay']"),
+                "SBIS_PLUGIN": (By.XPATH,
+                                "//div[contains(text(),'СБИС Плагин')]/following::div[@class='controls-tabButton__overlay']"),
                 "SBIS_DOWNLOAD_WEB": (By.XPATH,
                                       "//h3[contains(text(),'Веб-установщик')]/following::a[@class='sbis_ru-DownloadNew-loadLink__link js-link']")
                 }
